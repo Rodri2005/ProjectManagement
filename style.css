@@ -1,0 +1,408 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu bar */
+
+.background {
+  background-color: #003C8F;
+  position: absolute;
+  width: 100%;
+  height: 560px;
+  z-index: -2;
+}
+
+nav {
+  width: 100%;
+  height: auto;
+  background-color: #003C8F;
+  position: absolute;
+}
+
+ul {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 40px;
+  background-color: #003C8F;
+  padding: 5px 20px;
+}
+
+li:hover a.destino {
+  border-bottom: 1px solid #7288b9;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 3px;
+}
+
+li .posicion {
+  border-bottom: 2px solid #00C9CF;
+}
+
+.introduccion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  padding-top: 55px;
+}
+
+.texto {
+  width: 850px;
+  padding-left: 60px;
+  align-self: flex-start;
+  margin-top: 85px;
+  margin-right: 20px;
+}
+
+.texto h1 {
+  margin: 0px;
+  font-size: 52px;
+  color: #FFF;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.texto h2 {
+  margin: 0px;
+  font-size: 26px;
+  color: #FFF;
+  font-weight: normal;
+}
+
+.texto h3 {
+  margin: 0px;
+  font-size: 24px;
+  color: #EDBF07;
+}
+
+.texto button {
+  margin-top: 30px;
+  border: 1px solid #00C9CF;
+  background-color: inherit;
+  width: 200px;
+  height: 60px;
+  border-radius: 6px;
+  font-size: 22px;
+  color: #00C9CF;
+}
+
+.texto button:hover {
+  transition-duration: 0.1s;
+  background-color: rgb(30, 81, 148);
+  transform: scale(1.05, 1.05);
+}
+
+.imagen img {
+  width: 450px;
+  height: auto;
+  padding-left: 20px;
+}
+
+#btn-menu {
+  display: none;
+}
+
+label {
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-right: 1px solid #FFF;
+}
+
+label:hover {
+  cursor: pointer;
+  background: rgba(0,0,0,0.3);
+}
+
+/* Cuando sea pantalla pequeña esta sera la navegación */
+
+@media (max-width:810px) {
+  label {
+    display: block;
+    border-right: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+  }
+
+  .menu {
+    position: absolute;
+    width: 45%;
+    margin-left: -45%;
+    transition: all 1s;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  #btn-menu:checked ~ .menu {
+    margin: 0;
+    z-index: 1;
+    border: 1px solid #FFF;
+  }
+}
+
+/* Cuerpo del inicio */
+
+.cuerpo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.apartado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.descripcion {
+  width: 600px;
+  height: 350px;
+}
+
+.des-1 {
+  margin: 100px 70px 100px 30px;
+}
+
+.des-2 {
+  margin: 100px 30px 100px 70px;
+}
+
+.descripcion h1 {
+  font-size: 44px;
+  color: #11069F;
+  text-align: center;
+}
+
+.descripcion p {
+  text-align: center;
+  margin: 10px 30px;
+  font-size: 24px;
+}
+
+.descripcion hr {
+  height: 2px;
+  border: none;
+  background-color: #BADD76;
+}
+
+.apartado img {
+  width: 600px;
+  margin: 10px;
+}
+
+/* Ajuste de compatibilidad */
+
+@media (max-width: 1300px) {
+  .apartado img {
+    width: 500px;
+  }
+
+  .descripcion h1 {
+    font-size: 40px;
+  }
+
+  .descripcion p {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .texto h1 {
+    font-size: 48px;
+  }
+
+  .texto h2 {
+    font-size: 22px;
+  }
+
+  .apartado img {
+    width: 500px;
+  }
+
+  .descripcion h1 {
+    font-size: 38px;
+  }
+
+  .descripcion p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .texto h1 {
+    font-size: 44px;
+  }
+
+  .texto h2 {
+    font-size: 20px;
+  }
+
+  .texto h3 {
+    font-size: 22px;
+  }
+
+  .imagen img {
+    width: 420px;
+    height: auto;
+    padding-left: 20px;
+  }
+
+  .apartado img {
+    width: 400px;
+  }
+
+}
+
+@media (max-width: 953px) {
+  .introduccion .texto {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .imagen img {
+    width: 380px;
+    height: auto;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 810px) {
+  .imagen img {
+    width: 350px;
+    height: auto;
+    padding-left: 20px;
+  }
+
+  .introduccion {
+    padding: 0;
+  }
+
+  .apartado img {
+    width: 350px;
+  }
+}
+
+@media (max-width: 740px) {
+  .imagen img {
+    width: 280px;
+    height: auto;
+    padding-left: 20px;
+  }
+
+  .introduccion {
+    padding: 0;
+  }
+
+  .apartado img {
+    width: 300px;
+  }
+
+  .descripcion h1 {
+    font-size: 36px;
+  }
+
+  .descripcion p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .imagen img {
+    display: none;
+    overflow: hidden;
+  }
+
+  .introduccion {
+    padding-top: 40px;
+  }
+
+  .texto {
+    margin-right: 30px;
+  }
+
+  .texto h1 {
+    font-size: 48px;
+  }
+
+  .texto h2 {
+    font-size: 22px;
+  }
+
+  .texto h3 {
+    font-size: 24px;
+  }
+
+  .apartado img {
+    display: none;
+    overflow: hidden;
+  }
+
+  .des-1 {
+    margin: 40px 70px;
+  }
+
+  .des-2 {
+    margin: 40px 70px;
+  }
+
+  .descripcion h1 {
+    font-size: 48px;
+  }
+
+  .descripcion p {
+    font-size: 22px;
+  }
+
+}
+
+@media (max-width: 575px) {
+  .introduccion {
+    padding-top: 10px;
+  }
+
+  .des-2 {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .introduccion {
+    margin-left: -20px;
+    width: 400px;
+  }
+
+  .des-1 {
+    margin: 45px 40px;
+  }
+
+  .des-2 {
+    margin: 45px 40px;
+  }
+
+  .background {
+    height: 600px;
+  }
+
+}
